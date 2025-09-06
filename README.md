@@ -64,19 +64,20 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
     ```
    <img src="" width=800 />
 
-12. Add a new column to add the total inventory value 
-   ```bash
+12. Add a new column to add the total inventory value
+
+    ```bash
      # Adding a New column with the total inventory value to the spreadsheet
       inventory_price_sheet = product_list.cell(product_n, 5)
       inventory_price_sheet.value = inventory_value
-   ```
+     ```
    <img src="" width=800 />
-13. Saving the file with changes into a new spreadsheet.
-   ```bash
-    #Saving File in a New File
-    inv_file.save("Inventory_with_Total.xlsx")
-   ```
-   <img src="" width=800 />
+13. Saving the file with changes into a new spreadsheet 
+    ```bash
+      #Saving File in a New File
+      inv_file.save("Inventory_with_Total.xlsx")
+     ```
+     <img src="" width=800 />
    
  
    
