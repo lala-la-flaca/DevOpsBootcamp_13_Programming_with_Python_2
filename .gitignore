@@ -1,0 +1,38 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+../.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs, coverage, test artifacts
+*.log
+.coverage
+coverage/
+htmlcov/
+*.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints
+
+# dotenv / local configs
+.env
+*.env
+
+# --- PyCharm ---
+.idea/
+
+# --- OS-specific ---
+.DS_Store
+Thumbs.db
