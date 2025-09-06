@@ -27,21 +27,24 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
    ```bash
    pip install openpyxl
    ```
-   <img src="" />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/3%20installing%20openpyxl.png" />
    
-4. Import the openpyxl module to work with spreadsheets.
+3. Import the openpyxl module to work with spreadsheets.
    ```bash
    import openpyxl
    ```
-   <img src="" width=800 />
-5. Load the XLSX file into the project.
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/importing%20module.PNG" width=800 />
+   
+4. Load the XLSX file into the project.
+   
     ```bash
     #Reading Spreadsheet
     inv_file = openpyxl.load_workbook("inventory.xlsx")
     product_list = inv_file["Sheet1"]
    ```
-   <img src="" width=800 />
-6. Calculate the number of products per supplier.
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/reading%20file.PNG" width=800 />
+   
+5. Calculate the number of products per supplier.
     ```bash
       #Calculating the number of products per supplier
       if supplier_name in  products_per_supplier:
@@ -50,9 +53,9 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
           print("adding a new supplier")
           products_per_supplier[supplier_name] = 1
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/producs%20per%20supplier.PNG" width=800 />
    
-7. Calculate the total inventory value per supplier.
+6. Calculate the total inventory value per supplier.
     ```bash
        # Calculating Total Value  Inventory per supplier
       if supplier_name in total_value_per_supplier:
@@ -60,33 +63,37 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
       else:
           total_value_per_supplier[supplier_name] = inventory_value
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/inventory%20value.PNG" width=800 />
    
-8. Check for low-stock inventory
+7. Check for low-stock inventory
     ```bash
         if inventory < 10:
         product_id = product_list.cell(product_n,1).value
         print(f" {supplier_name}: Low stock for product Id: {product_id}, available:{inventory}")
         low_stock_inventory[int(product_id)] = int(inventory)
     ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/low%20stock.PNG" width=800 />
 
-9. Add a new column to add the total inventory value
+8. Add a new column to add the total inventory value
 
     ```bash
      # Adding a New column with the total inventory value to the spreadsheet
       inventory_price_sheet = product_list.cell(product_n, 5)
       inventory_price_sheet.value = inventory_value
      ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/column.PNG" width=800 />
    
-10. Saving the file with changes into a new spreadsheet
+09. Saving the file with changes into a new spreadsheet
 
    ```bash
    #Saving File in a New File
    inv_file.save("Inventory_with_Total.xlsx")
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/saving%20file.PNG" width=800 />
+
+10. Output Results:
+
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/results.PNG" width=800/>
    
  
    
