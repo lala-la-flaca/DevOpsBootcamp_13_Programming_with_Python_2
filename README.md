@@ -23,19 +23,25 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
 
 # ⚙️ Project Configuration
 1. Create a new Python file named AutomationPython.
-2. Import the openpyxl module to work with spreadsheets.
+2. Install the openpyxl module.
+   ```bash
+   pip install openpyxl
+   ```
+   <img src="" />
+   
+4. Import the openpyxl module to work with spreadsheets.
    ```bash
    import openpyxl
    ```
    <img src="" width=800 />
-3. Load the XLSX file into the project.
+5. Load the XLSX file into the project.
     ```bash
     #Reading Spreadsheet
     inv_file = openpyxl.load_workbook("inventory.xlsx")
     product_list = inv_file["Sheet1"]
    ```
    <img src="" width=800 />
-4. Calculate the number of products per supplier.
+6. Calculate the number of products per supplier.
     ```bash
       #Calculating the number of products per supplier
       if supplier_name in  products_per_supplier:
@@ -46,7 +52,7 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
    ```
    <img src="" width=800 />
    
-5. Calculate the total inventory value per supplier.
+7. Calculate the total inventory value per supplier.
     ```bash
        # Calculating Total Value  Inventory per supplier
       if supplier_name in total_value_per_supplier:
@@ -56,7 +62,7 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
    ```
    <img src="" width=800 />
    
-6. Check for low-stock inventory
+8. Check for low-stock inventory
     ```bash
         if inventory < 10:
         product_id = product_list.cell(product_n,1).value
@@ -65,7 +71,7 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
     ```
    <img src="" width=800 />
 
-7. Add a new column to add the total inventory value
+9. Add a new column to add the total inventory value
 
     ```bash
      # Adding a New column with the total inventory value to the spreadsheet
@@ -74,7 +80,7 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
      ```
    <img src="" width=800 />
    
-8. Saving the file with changes into a new spreadsheet
+10. Saving the file with changes into a new spreadsheet
 
    ```bash
    #Saving File in a New File
