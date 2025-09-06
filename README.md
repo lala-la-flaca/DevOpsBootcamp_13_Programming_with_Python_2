@@ -10,7 +10,8 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
 * IntelliJ-PyCharm: IDE used for development.
   
 # 🎯 Features
-✅ Reads spreadsheet data
+✅ Reads spreadsheet data.
+
 🔄 Processes and manipulates rows and columns:
    * List each company with the respective  product count.
    * List products with inventory less than 10 products.
@@ -27,14 +28,14 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
    import openpyxl
    ```
    <img src="" width=800 />
-4. Load the XLSX file into the project.
+3. Load the XLSX file into the project.
     ```bash
     #Reading Spreadsheet
     inv_file = openpyxl.load_workbook("inventory.xlsx")
     product_list = inv_file["Sheet1"]
    ```
    <img src="" width=800 />
-6. Calculate the number of products per supplier.
+4. Calculate the number of products per supplier.
     ```bash
       #Calculating the number of products per supplier
       if supplier_name in  products_per_supplier:
@@ -45,7 +46,7 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
    ```
    <img src="" width=800 />
    
-8. Calculate the total inventory value per supplier.
+5. Calculate the total inventory value per supplier.
     ```bash
        # Calculating Total Value  Inventory per supplier
       if supplier_name in total_value_per_supplier:
@@ -55,7 +56,7 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
    ```
    <img src="" width=800 />
    
-10. Check for low-stock inventory
+6. Check for low-stock inventory
     ```bash
         if inventory < 10:
         product_id = product_list.cell(product_n,1).value
@@ -64,7 +65,7 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
     ```
    <img src="" width=800 />
 
-12. Add a new column to add the total inventory value
+7. Add a new column to add the total inventory value
 
     ```bash
      # Adding a New column with the total inventory value to the spreadsheet
@@ -72,12 +73,14 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
       inventory_price_sheet.value = inventory_value
      ```
    <img src="" width=800 />
-13. Saving the file with changes into a new spreadsheet 
-    ```bash
-      #Saving File in a New File
-      inv_file.save("Inventory_with_Total.xlsx")
-     ```
-     <img src="" width=800 />
+   
+8. Saving the file with changes into a new spreadsheet
+
+   ```bash
+   #Saving File in a New File
+   inv_file.save("Inventory_with_Total.xlsx")
+   ```
+   <img src="" width=800 />
    
  
    
