@@ -84,12 +84,11 @@ Build a Python application that reads, processes, and manipulates spreadsheet fi
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/column.PNG" width=800 />
    
 09. Saving the file with changes into a new spreadsheet
-
-   ```bash
-   #Saving File in a New File
-   inv_file.save("Inventory_with_Total.xlsx")
-   ```
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/saving%20file.PNG" width=800 />
+    ```bash
+     #Saving File in a New File
+     inv_file.save("Inventory_with_Total.xlsx")
+     ```
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_2/blob/main/Img/saving%20file.PNG" width=800 />
 
 10. Output Results:
 
