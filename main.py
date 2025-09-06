@@ -26,7 +26,7 @@ for product_n in range(2,product_list.max_row+1):
         print("adding a new supplier")
         products_per_supplier[supplier_name] = 1
 
-    # Calculating Total Value  Inventory per supplier
+    # Calculating Total Inventory value per supplier
     if supplier_name in total_value_per_supplier:
         total_value_per_supplier[supplier_name] += inventory_value
     else:
